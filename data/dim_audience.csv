@@ -1,0 +1,5 @@
+audience_id,audience_type,interest_cluster,geo_segment,customer_persona,created_at
+1,Lookalike,Fashion,India,Young Professionals,2026-05-24 15:44:06
+2,Interest Based,Luxury,UAE,High Income,2026-05-24 15:44:06
+3,Retargeting,Cart Abandoners,India,Returning Visitors,2026-05-24 15:44:06
+4,Broad,Streetwear,US,Gen Z,2026-05-24 15:44:06
