@@ -409,3 +409,74 @@ FROM dim_date;
 --     CAST(STRFTIME('%Y', date_val) AS INTEGER),
 --     CASE WHEN STRFTIME('%w', date_val) IN ('0', '6') THEN 1 ELSE 0 END
 -- FROM date_range;
+-- =====================================================
+-- ADVANCED DIMENSION TABLES
+-- =====================================================
+
+CREATE TABLE IF NOT EXISTS dim_creative (
+    creative_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    creative_name TEXT,
+    creative_format TEXT,
+    creative_type TEXT,
+    hook_style TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS dim_audience (
+    audience_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    audience_type TEXT,
+    interest_cluster TEXT,
+    geo_segment TEXT,
+    customer_persona TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- =====================================================
+-- PERFORMANCE INDEXES
+-- =====================================================
+
+CREATE INDEX IF NOT EXISTS idx_campaign_date
+ON fact_campaign_performance(date);
+
+CREATE INDEX IF NOT EXISTS idx_campaign_region
+ON dim_campaign(target_region);
+
+CREATE INDEX IF NOT EXISTS idx_campaign_funnel
+ON dim_campaign(funnel_stage);
+
+CREATE INDEX IF NOT EXISTS idx_campaign_roas
+ON fact_campaign_performance(roas);
+
+CREATE INDEX IF NOT EXISTS idx_campaign_spend
+ON fact_campaign_performance(spend);
+
+-- =====================================================
+-- AI ANALYTICS VIEW
+-- =====================================================
+
+CREATE VIEW IF NOT EXISTS v_ai_creative_performance AS
+SELECT
+    c.creative_name,
+    c.creative_format,
+    AVG(f.roas) as avg_roas,
+    AVG(f.ctr) as avg_ctr,
+    AVG(f.cvr) as avg_cvr,
+    SUM(f.spend) as total_spend,
+    SUM(f.revenue) as total_revenue
+FROM fact_campaign_performance f
+LEFT JOIN dim_creative c
+ON f.creative_id = c.creative_id
+GROUP BY c.creative_name, c.creative_format;
+
+CREATE VIEW IF NOT EXISTS v_ai_audience_performance AS
+SELECT
+    a.audience_type,
+    a.interest_cluster,
+    AVG(f.roas) as avg_roas,
+    AVG(f.cpc) as avg_cpc,
+    AVG(f.cvr) as avg_cvr,
+    SUM(f.spend) as total_spend
+FROM fact_campaign_performance f
+LEFT JOIN dim_audience a
+ON f.audience_id = a.audience_id
+GROUP BY a.audience_type, a.interest_cluster;
