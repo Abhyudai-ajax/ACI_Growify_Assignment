@@ -1,123 +1,128 @@
 # 🚀 Growify AI Marketing Intelligence Platform
 
-AI-powered analytics engineering platform for campaign optimization, funnel intelligence, audience analytics, and marketing decision intelligence.
+> End-to-end AI-powered analytics engineering platform for campaign optimization, audience intelligence, funnel analytics, and marketing decision intelligence.
 
-Built as part of the Growify Digital Data Analyst + AI Developer Assignment.
-
----
-
-# 📌 Project Overview
-
-Growify AI Marketing Intelligence Platform is a complete end-to-end analytics engineering system designed to:
-
-- clean and process raw marketing datasets
-- build a dimensional data warehouse
-- generate advanced campaign intelligence
-- analyze marketing funnels
-- detect performance anomalies
-- recommend optimization actions
-- provide interactive AI-powered dashboards
-
-The platform combines:
-- Data Engineering
-- SQL Warehousing
-- Analytics Engineering
-- AI Insight Systems
-- Interactive Business Intelligence
+Built for the **Growify Digital Data Analyst + AI Developer Assignment**.
 
 ---
 
-# ✨ Core Features
+# 🌟 Project Highlights
 
-## ✅ Data Engineering Pipeline
-- Automated ETL workflow
-- Raw campaign ingestion
+✅ End-to-End Analytics Engineering Platform  
+✅ AI-Powered Marketing Intelligence System  
+✅ Star Schema Data Warehouse  
+✅ KPI & Funnel Analytics Engine  
+✅ Creative + Audience Intelligence  
+✅ Action Recommendation Engine  
+✅ Interactive Streamlit Dashboard  
+✅ SQL Analytics Layer  
+✅ Real Business Intelligence Workflow  
+
+---
+
+# 📸 Dashboard Preview
+
+## Executive Intelligence Dashboard
+
+![Dashboard](screenshots/dashboard_home.png)
+
+---
+
+## Campaign Intelligence
+
+![Campaign Analytics](screenshots/campaign_roas.png)
+
+---
+
+## Audience Intelligence
+
+![Audience](screenshots/audience_intelligence.png)
+
+---
+
+## AI Recommendation Engine
+
+![Recommendations](screenshots/recommendation_engine.png)
+
+---
+
+# 📌 Problem Statement
+
+Modern marketing teams generate huge volumes of campaign data across:
+- Meta Ads
+- Shopify
+- audience segments
+- creatives
+- conversion funnels
+
+But raw data alone is not enough.
+
+Teams need:
+- centralized analytics
+- KPI tracking
+- funnel intelligence
+- actionable recommendations
+- decision automation
+
+This platform solves that problem by transforming raw campaign datasets into:
+# AI-powered business intelligence.
+
+---
+
+# 🧠 What This Platform Does
+
+The system automatically:
+
+✅ Cleans marketing datasets  
+✅ Builds dimensional warehouse models  
+✅ Calculates advanced KPIs  
+✅ Detects funnel leakage  
+✅ Analyzes audience performance  
+✅ Scores creatives  
+✅ Generates optimization recommendations  
+✅ Visualizes business intelligence dashboards  
+
+---
+
+# 🏗️ System Architecture
+
+```text
+Raw Marketing Data
+        ↓
+ETL Cleaning Pipeline
+        ↓
+SQLite Data Warehouse
+        ↓
+Dimensional Star Schema
+        ↓
+Analytics & KPI Engine
+        ↓
+AI Intelligence Layer
+        ↓
+Interactive Streamlit Dashboard
+```
+
+---
+
+# ⚡ Core Features
+
+## 🔄 ETL Data Pipeline
+
+Automated pipeline for:
+- campaign ingestion
 - Shopify sales processing
-- Null handling & normalization
+- null handling
+- schema normalization
 - KPI transformations
-- Logging & reporting
+- anomaly detection
 
 ---
 
-## ✅ Marketing Intelligence Engine
-- ROAS analysis
-- CTR / CPC / CPM analytics
-- Funnel leak detection
-- Audience intelligence
-- Creative performance scoring
-- Campaign optimization insights
+## 📊 Analytics Engineering
 
----
+Built advanced analytics systems for:
 
-## ✅ AI Recommendation Engine
-The platform automatically recommends:
-
-- ✅ SCALE
-- ⚠️ OPTIMIZE
-- ❌ PAUSE
-
-based on campaign performance metrics.
-
----
-
-## ✅ Interactive AI Dashboard
-Built using:
-- Streamlit
-- Plotly
-- SQLite
-
-Dashboard includes:
-- Executive KPI layer
-- Campaign analytics
-- Audience insights
-- Funnel visualization
-- Creative intelligence
-- AI recommendations
-
----
-
-# 🧠 Tech Stack
-
-| Category | Technologies |
-|---|---|
-| Programming | Python |
-| Database | SQLite |
-| Data Processing | Pandas |
-| Visualization | Plotly |
-| Dashboarding | Streamlit |
-| Warehousing | SQL |
-| Analytics | KPI Engineering |
-| AI Architecture | Text-to-SQL Design |
-
----
-
-# 🏗️ Warehouse Architecture
-
-The platform uses a:
-
-# ⭐ Star Schema Warehouse
-
-## Fact Tables
-- `fact_campaign_performance`
-
-## Dimension Tables
-- `dim_campaign`
-- `dim_creative`
-- `dim_audience`
-- `dim_date`
-
-## Analytics Views
-- Campaign ROI Views
-- Funnel Analysis Views
-- Executive KPI Views
-- AI Insight Views
-
----
-
-# 📊 Key Marketing Metrics
-
-The system calculates:
-
+### Marketing KPIs
 - ROAS
 - CTR
 - CPC
@@ -125,36 +130,114 @@ The system calculates:
 - CVR
 - Revenue
 - Spend
-- Funnel Performance
-- Audience ROI
+
+### Funnel Analytics
+- high CTR / low CVR detection
+- conversion bottleneck analysis
+- funnel leak identification
+
+### Campaign Intelligence
+- top-performing campaigns
+- spend efficiency analysis
+- scaling opportunities
 
 ---
 
-# 🤖 AI Intelligence Features
+## 🎨 Creative Intelligence Engine
 
-## Creative Intelligence
 Analyzes:
-- best performing creatives
+- creative performance
 - revenue contribution
-- creative format impact
+- winning ad formats
+- creative ROAS impact
 
-## Audience Intelligence
+Supports:
+- video creatives
+- carousel creatives
+- static creatives
+
+---
+
+## 🧠 Audience Intelligence Engine
+
 Analyzes:
 - geo performance
 - audience segments
 - customer personas
+- targeting efficiency
 
-## Funnel Leak Detection
-Detects:
-- high CTR + low CVR campaigns
-- funnel inefficiencies
-- conversion bottlenecks
+Examples:
+- Lookalike audiences
+- Retargeting audiences
+- Broad targeting
+- Interest-based targeting
 
-## Action Recommendation Engine
-Automatically suggests:
-- scale winning campaigns
-- pause underperforming campaigns
-- optimize weak funnels
+---
+
+## 🤖 AI Recommendation Engine
+
+The platform automatically suggests:
+
+| Action | Meaning |
+|---|---|
+| ✅ SCALE | Strong performing campaigns |
+| ⚠️ OPTIMIZE | Moderate performance |
+| ❌ PAUSE | Underperforming campaigns |
+
+Generated dynamically using campaign metrics.
+
+---
+
+# ⭐ Data Warehouse Design
+
+The system uses a:
+
+# Star Schema Architecture
+
+## Fact Tables
+
+### `fact_campaign_performance`
+Stores:
+- impressions
+- clicks
+- conversions
+- spend
+- revenue
+- ROAS
+- CTR
+- CVR
+
+---
+
+## Dimension Tables
+
+### `dim_campaign`
+Campaign metadata & structure
+
+### `dim_creative`
+Creative performance attributes
+
+### `dim_audience`
+Audience segmentation intelligence
+
+### `dim_date`
+Time-based analytics
+
+---
+
+# 🧰 Tech Stack
+
+| Category | Technology |
+|---|---|
+| Language | Python |
+| Database | SQLite |
+| Data Processing | Pandas |
+| Visualization | Plotly |
+| Dashboard | Streamlit |
+| Warehousing | SQL |
+| Analytics | KPI Engineering |
+| AI Layer | Rule-Based Recommendation Engine |
+| Architecture | Star Schema |
 
 ---
 
@@ -164,7 +247,6 @@ Automatically suggests:
 Growify_AI_Platform/
 │
 ├── data/
-│   ├── cleaned/
 │   ├── database/
 │   ├── reports/
 │   ├── campaigns_raw.csv
@@ -181,10 +263,115 @@ Growify_AI_Platform/
 │   ├── migration_v2.sql
 │   └── populate_warehouse.sql
 │
-├── logs/
-│
 ├── screenshots/
 │
 ├── README.md
 ├── requirements.txt
 └── POWER_BI_SETUP.md
+```
+
+---
+
+# 🚀 How To Run
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/Abhyudai-ajax/ACI_Growify_Assignment.git
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 3️⃣ Run ETL Pipeline
+
+```bash
+python python/data_cleaner.py
+```
+
+---
+
+## 4️⃣ Run AI Intelligence Engine
+
+```bash
+python python/ai_insight_tool_v2.py
+```
+
+---
+
+## 5️⃣ Launch Dashboard
+
+```bash
+python -m streamlit run python/dashboard.py
+```
+
+---
+
+# 📈 Example Insights Generated
+
+## Funnel Leak Detection
+Detects campaigns with:
+- high CTR
+- low conversion rate
+- weak checkout performance
+
+---
+
+## Audience Intelligence
+Finds:
+- best geographic regions
+- highest ROAS audiences
+- strongest customer personas
+
+---
+
+## Creative Intelligence
+Identifies:
+- top-performing ad formats
+- highest revenue creatives
+- scalable ad assets
+
+---
+
+# 🎯 Business Impact
+
+This platform helps marketing teams:
+
+✅ optimize ad spend  
+✅ improve ROAS  
+✅ detect weak funnels  
+✅ identify winning creatives  
+✅ scale profitable audiences  
+✅ automate campaign intelligence  
+
+---
+
+# 🧪 Assignment Requirements Covered
+
+✅ Data Cleaning  
+✅ ETL Engineering  
+✅ SQL Warehousing  
+✅ Star Schema Modeling  
+✅ KPI Engineering  
+✅ Marketing Intelligence  
+✅ AI Recommendation Engine  
+✅ Dashboard Development  
+✅ Funnel Analytics  
+✅ Audience Intelligence  
+
+---
+
+# 👨‍💻 Author
+
+# Abhyudai Tiwari
+
+AI + Analytics Engineering Project
+
+---
