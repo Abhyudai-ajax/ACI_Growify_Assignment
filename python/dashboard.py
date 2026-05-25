@@ -17,7 +17,7 @@ st.set_page_config(
 # =====================================================
 
 conn = sqlite3.connect(
-    "data/database/cleaned_campaigns.db"
+    "../data/database/cleaned_campaigns.db"
 )
 
 # =====================================================
